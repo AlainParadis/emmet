@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads" # Folder where images/videos will be uploaded
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts" # Top-level name in the CMS UI
+    label: "Blog Posts" # Label in the CMS
+    folder: "_posts" # Folder where posts are stored in your repository
+    create: true # Allow users to create new files in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # File name format
+    fields: # Fields for the form in the CMS
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
