@@ -1,6 +1,15 @@
 port: 4003
 title: Emmet's Portfolio
 email: emmet@paradisfamily.ca
+linkedin:
+muckrack:
+instagram:
+about-me: >-
+  This is text about me. I'm 20 years old. I have a diploma in Journalism. I'm working on a degree in polical studies. I've written for The Algonquin Times, Village Media, and The Queen's Journal. This is my portfolio.
+clients:
+  - "Algonquin Times"
+  - "Village Media"
+  - "Queen's Journal"
 description: >-
   This is Emmet Paradis' writing portfolio site. It features the best of his projects.
 baseurl: "" # the subpath of your site, e.g. /blog
