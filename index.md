@@ -1,4 +1,6 @@
 ---
 title: Draft Article
 ---
-This is a draft article.
+![](/assets/uploads/golf-r.jpg)
+
+This is a **draft** *article*.
