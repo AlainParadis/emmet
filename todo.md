@@ -6,26 +6,27 @@
 -   [Journalist Portfolio Samples](https://www.journoportfolio.com/examples/journalists/)
 -   [Portfolio Examples](https://www.sitebuilderreport.com/inspiration/journalist-portfolio-websites?subId1=inspiration/journalist_portfolio-websites)
 -   [More examples](https://authory.com/blog/journalist-website)
+-   [Yet more examples](https://createtoday.io/examples?category=journalist)
 
 ## Head Elements
 
-<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
-<link rel="apple-touch-icon" href="{{ '/favicon-152.png' | relative_url }}">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Algonquin Design &ndash; Graphic Design Program">
-<meta property="og:description" content="Explore the Graphic Design program at Algonquin College. Learn, create, and launch your design career with our innovative curriculum.">
-<meta property="og:url" content="https://algonquindesign.ca">
-<meta property="og:image" content="https://algonquindesign.ca/favicon-social.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Algonquin Design &ndash; Graphic Design Program">
-<meta name="twitter:description" content="Explore the Graphic Design program at Algonquin College. Learn, create, and launch your design career with our innovative curriculum.">
-<meta name="twitter:image" content="https://algonquindesign.ca/favicon-social.png">
-
-<script src="https://unpkg.com/@botpoison/browser" async></script>
-
-<link rel="canonical" href="https://algonquindesign.ca{{ page.url }}">
-
-<link rel="preload" as="font" href="{{ site.baseurl }}/fonts/merriweather-regular.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="{{ site.baseurl }}/fonts/opensans-regular.woff2" type="font/woff2" crossorigin>
-
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">  
+    <link rel="apple-touch-icon" href="{{ '/favicon-152.png' | relative_url }}">  
+      
+    <meta property="og:type" content="website">  
+    <meta property="og:title" content="Algonquin Design &ndash; Graphic Design Program">  
+    <meta property="og:description" content="Explore the Graphic Design program at Algonquin College. Learn, create, and launch your design career with our innovative curriculum.">  
+    <meta property="og:url" content="https://algonquindesign.ca">  
+    <meta property="og:image" content="https://algonquindesign.ca/favicon-social.png">  
+    <meta name="twitter:card" content="summary_large_image">  
+    <meta name="twitter:title" content="Algonquin Design &ndash; Graphic Design Program">  
+    <meta name="twitter:description" content="Explore the Graphic Design program at Algonquin College. Learn, create, and launch your design career with our innovative curriculum.">  
+    <meta name="twitter:image" content="https://algonquindesign.ca/favicon-social.png">  
+      
+    <script src="https://unpkg.com/@botpoison/browser" async></script>  
+      
+    <link rel="canonical" href="https://algonquindesign.ca{{ page.url }}">  
+      
+    <link rel="preload" as="font" href="{{ site.baseurl }}/fonts/merriweather-regular.woff2" type="font/woff2" crossorigin>  
+    <link rel="preload" as="font" href="{{ site.baseurl }}/fonts/opensans-regular.woff2" type="font/woff2" crossorigin>  
+      
