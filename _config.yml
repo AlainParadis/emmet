@@ -10,6 +10,7 @@ clients:
   - "Algonquin Times"
   - "Village Media"
   - "Queen's Journal"
+  - "Inquire Publication"
 description: >-
   This is Emmet Paradis' writing portfolio site. It features the best of his projects.
 baseurl: "" # the subpath of your site, e.g. /blog
