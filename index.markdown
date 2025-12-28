@@ -34,7 +34,7 @@ intro: "This is the goal of the web site."
 	</section>
 	<section class="articles" id="articles">
 		<h2>
-			I've written for
+			I've written for...
 		</h2>
 		<article>
 			<h3>

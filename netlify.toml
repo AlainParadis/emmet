@@ -1,16 +1,23 @@
 [build]
-  command = "jekyll build"
-  publish = "_site"
-  
+  command = "jekyll build"   # Build the Jekyll site
+  publish = "_site"          # Jekyll output directory
+
 [build.environment]
-  RUBY_VERSION = "3.2.2"
+  RUBY_VERSION = "3.2.2"     # Ruby version required for Jekyll
 
 [[headers]]
   for = "/admin/*"
   [headers.values]
-    Cache-Control = "no-cache"
-
+    Cache-Control = "no-cache" # Prevent caching for admin interface
+  
 [[redirects]]
+  # Ensure SPA fallback handling for Decap CMS
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+  
+[[redirects]]
+  # Ensure all unknown paths fallback to main index
   from = "/*"
   to = "/index.html"
   status = 200

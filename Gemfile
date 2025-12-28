@@ -5,3 +5,4 @@ group :jekyll_plugins do
 end
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 gem "webrick", "~> 1.9"
+gem "faraday-retry"
