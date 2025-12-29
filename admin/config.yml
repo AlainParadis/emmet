@@ -20,7 +20,9 @@ collections:
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'article' }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
       - { label: "Date", name: "date", widget: "datetime", required: false }
       - { label: "Categories", name: "categories", widget: "list", default: [] }
       - { label: "Featured image", name: "featured_image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "markdown", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
