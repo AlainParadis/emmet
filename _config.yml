@@ -18,3 +18,8 @@ exclude:
   - vendor/ruby/
 include:
   - static
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:slug/
