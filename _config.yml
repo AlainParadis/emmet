@@ -1,6 +1,6 @@
 port: 4003
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alainparadis.github.io"
+baseurl: "/emmet"
 github_username: alainparadis
 github_repo: https://alainparadis.github.io/emmet/
 plugins:
