@@ -1,4 +1,5 @@
 ---
+layout: article
 title: This is my Second Article
 date: 2025-12-29T11:36:00
 categories:

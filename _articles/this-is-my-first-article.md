@@ -1,4 +1,5 @@
 ---
+layout: article
 title: This is my First Article
 date: 2025-12-29T11:21:00
 categories:
