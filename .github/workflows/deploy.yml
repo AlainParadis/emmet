@@ -1,6 +1,5 @@
 name: Build and Deploy
 
-# Trigger this workflow when changes are pushed to the main branch
 on:
   push:
     branches:
@@ -11,27 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code from the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Set up Node.js (if using a JavaScript framework or toolchain like React, Vue, etc.)
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # Specify the version of Node.js used by your project
+          node-version: 18
 
-      # Install project dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Build the project (execute your build script)
       - name: Build the Site
-        run: npm run build # Ensure your package.json has a "build" script
+        run: npm run build
 
-      # Deploy the built files to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Token for authentication
-          publish_dir: ./public # Path to the built site files (adjust accordingly)
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
