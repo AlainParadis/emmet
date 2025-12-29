@@ -4,6 +4,7 @@
   "description": "This is the repo for Emmet's writing portfolio.",
   "main": "index.js",
   "scripts": {
+    "build": "bundle exec jekyll build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
