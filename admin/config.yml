@@ -1,0 +1,28 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: alainparadis/emmet
+  branch: main
+  publish_mode: editorial_workflow
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "_articles"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'article' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Categories", name: "categories", widget: "list", default: [] }
+      - { label: "Featured image", name: "featured_image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "markdown", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
