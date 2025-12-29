@@ -1,61 +1,49 @@
 ---
 layout: default
 title: Emmet Paradis' Portfolio
-heading: "Page Heading"
-intro: "This is the goal of the web site."
 ---
 <ul class="skip-links">
 	<li><a href="#articles">Jump to Articles</a></li>
 </ul>
 <header>
 	<h1>
-		{{ page.title }}
+		{{ page.title }} 
 	</h1>
 	<nav>
-        {% include nav.html %}
+		{% include nav.html %} 
 	</nav>
 </header>
 <main>
 	<section id="home">
 		<h2>
-			{{ page.heading }}
+			{{ site.data.sitewide.intro-heading }} 
 		</h2>
 		<p>
-			{{ page.intro }}
+			{{ site.data.sitewide.intro-content }} 
 		</p>
 	</section>
 	<section class="about" id="about">
 		<h2>
-			About Me
+			About Me 
 		</h2>
 		<p>
-			{{ site.data.about-me }}
+			{{ site.data.sitewide.about-me }} 
 		</p>
 	</section>
 	<section class="articles" id="articles">
 		<h2>
-			I've written for...
+			These are my articles:
 		</h2>
 		<article>
-			<h3>
-				Article One
-			</h3>
-			<p>
-				Deck for article one.
-			</p>
-		</article>
-		<article>
-			<h3>
-				Article Two
-			</h3>
-			<p>
-				Deck for article two.
-			</p>
+            {% include cards-articles.html sortby="date" limit=6 %}
 		</article>
 	</section>
 </main>
 <footer>
 	<p>
-		&copy; 2026 Emmet Paradis. All rights reserved.
+		&copy; 2026 Emmet Paradis. All rights reserved. 
 	</p>
+	<span class=""><a href="{{ site.data.sitewide.linkedin }}" target="_blank">LinkedIn</a></span>
+	<span class=""><a href="{{ site.data.sitewide.muckrack }}" target="_blank">Muck Rack</a></span>
+	<span class=""><a href="{{ site.data.sitewide.instagram }}" target="_blank">Instagram</a></span> 
 </footer>
