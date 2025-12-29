@@ -1,6 +1,6 @@
 port: 4003
-url: "https://alainparadis.github.io/emmet"
-baseurl: ""
+url: "https://alainparadis.github.io"
+baseurl: "/emmet"
 github_username: alainparadis
 github_repo: "https://alainparadis.github.io/emmet/"
 plugins:
