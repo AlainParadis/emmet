@@ -1,25 +1,25 @@
-# local_backend: true
+local_backend: true
 
 backend:
   name: github
-  repo: alainparadis/emmet        # Your GitHub username and repository name
-  branch: main                    # The branch where your content is stored
+  repo: alainparadis/emmet
+  branch: main
+  publish_mode: editorial_workflow
 
-publish_mode: editorial_workflow  # Allows drafts before publishing
-
-media_folder: assets/uploads       # Where uploaded images/assets are saved in your repository
-public_folder: /assets/uploads            # The public URL path for media files
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: articles
-    label: Articles                # The CMS label for this content type
-    folder: _posts                 # Directory where articles are saved in the repository
+  - name: "articles"
+    label: "Articles"
+    folder: "_articles"
     create: true
-    slug: "{{slug}}"               # Slug auto-generated from the title
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime }
-      - { label: Body, name: body, widget: markdown }
-
-exclude:
-  - static
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Categories", name: "categories", widget: "list", default: [] }
+      - { label: "Featured image", name: "featured_image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
