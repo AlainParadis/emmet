@@ -12,11 +12,12 @@
 	{% include header.html %} 
 </header>
 <main>
-	<section class="" id="">
+	<article class="" id="">
 	<h2>{{ page.title }}</h2>
-    <p>{{ page.date }} | Categories: {{ page.categories }}</p>
+    <div>{{ page.date }} | Categories: {{ page.categories }}</div>
+    <div>{{ page.excerpt | markdownify }}</div>
 	{{ content }}
-	</section>
+	</article>
 </main>
 <footer>
 	<p>

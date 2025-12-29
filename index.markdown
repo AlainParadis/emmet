@@ -1,20 +1,14 @@
 ---
 layout: default
-title: Emmet Paradis' Portfolio
 ---
 <ul class="skip-links">
 	<li><a href="#articles">Jump to Articles</a></li>
 </ul>
-<header>
-	<h1>
-		{{ page.title }} 
-	</h1>
-	<nav>
-		{% include nav.html %} 
-	</nav>
+<header id="header" class="header">
+	{% include header.html %} 
 </header>
 <main>
-	<section id="home">
+	<section class="siteintro" id="siteintro">
 		<h2>
 			{{ site.data.sitewide.intro-heading }} 
 		</h2>
@@ -30,20 +24,22 @@ title: Emmet Paradis' Portfolio
 			{{ site.data.sitewide.about-me }} 
 		</p>
 	</section>
+	<section id="findme" class="findme">
+		<h2>
+			Find Me 
+		</h2>
+		<span class=""><a href="{{ site.data.sitewide.linkedin }}" target="_blank">LinkedIn</a></span> <span class=""><a href="{{ site.data.sitewide.muckrack }}" target="_blank">Muck Rack</a></span> <span class=""><a href="{{ site.data.sitewide.instagram }}" target="_blank">Instagram</a></span> 
+	</section>
+	{% assign public_articles = site.articles | where_exp: "article", "article.draft == false" %} 
 	<section class="articles" id="articles">
 		<h2>
-			These are my articles:
+			These are my articles: 
 		</h2>
-		<article>
-            {% include cards-articles.html sortby="date" limit=6 %}
-		</article>
+		<div>
+			{% include cards-articles.html articles=public_articles sortby="date" limit=6 %} 
+		</div>
 	</section>
 </main>
 <footer>
-	<p>
-		&copy; 2026 Emmet Paradis. All rights reserved. 
-	</p>
-	<span class=""><a href="{{ site.data.sitewide.linkedin }}" target="_blank">LinkedIn</a></span>
-	<span class=""><a href="{{ site.data.sitewide.muckrack }}" target="_blank">Muck Rack</a></span>
-	<span class=""><a href="{{ site.data.sitewide.instagram }}" target="_blank">Instagram</a></span> 
+	{% include footer.html %} 
 </footer>

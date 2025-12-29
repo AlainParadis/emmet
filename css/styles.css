@@ -12,7 +12,6 @@
 	--mono: 'IBMPlexMono', monospace;
 	--font-size-base: clamp(16px, 1vw + 14px, 20px);
 	--font-size-small: clamp(14px, 0.9vw + 12px, 18px);
-	--font-size-h2: clamp(24px, 2vw + 20px, 32px);
 	--spacing-xs: 0.5rem;
 	--spacing-sm: 1rem;
 	--spacing-md: 1.5rem;
@@ -39,11 +38,55 @@ body
 	overflow-x: hidden;
 }
 
+a,
+a:link,
+a:visited
+{
+	border-bottom: 0.1em solid rgba(85, 85, 85, 0.3);
+	color: var(--color-link);
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+a:hover,
+a:focus,
+a:active
+{
+	border-bottom-color: var(--color-text-dark);
+	color: var(--color-text-dark);
+}
+
+a:focus
+{
+	outline: 2px solid var(--color-text-dark);
+	outline-offset: 2px;
+}
+
 .page-wrapper
 {
-	width: 90%;
-	margin: 0 auto 0 auto;
+	display: grid;
+	/* One column, auto rows, no vertical gaps */
+	grid-template-columns: 1fr;
+	grid-auto-rows: auto;
+	row-gap: 0;
+	column-gap: 0;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+header, section, article, footer { padding: 1rem; }
+
+article.card
+{
+	margin-bottom: 1rem;
+	padding: 1rem 0.5rem 1rem 0.5rem;
+	border: solid 1px #C0C0C0;
+}
+
+header { background-color: #C0C0C0; }
+section { }
+footer { border-top: 1px solid #C0C0C0; }
 
 .skip-links
 {
@@ -78,63 +121,33 @@ body
 
 h1, h2, h3, h4, h5, h6
 {
-	margin: 0 0 var(--spacing-md) 0;
+	margin: 0;
 	line-height: 1.3;
 	font-family: var(--sans);
 }
 
-p { margin: 0 0 var(--spacing-md) 0; }
+h1 a { border: 0; }
+p { margin: 0; }
 small { font-size: var(--font-size-small); }
 em { font-style: italic; }
 strong { font-weight: 900; }
 
-a,
-a:link,
-a:visited
+ul
 {
-	border-bottom: 0.1em solid rgba(85, 85, 85, 0.3);
-	color: var(--color-link);
-	text-decoration: none;
-	transition: var(--transition);
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
 }
 
-a:hover,
-a:focus,
-a:active
+ul li { }
+
+article img
 {
-	border-bottom-color: var(--color-text-dark);
-	color: var(--color-text-dark);
+	max-width: 500px;
+	height: auto;
+	display: block;
+	margin: 1.5rem auto;
+	border: solid 1px grey;
 }
 
-a:focus
-{
-	outline: 2px solid var(--color-text-dark);
-	outline-offset: 2px;
-}
-
-.container
-{
-	margin: 0 auto;
-	max-width: var(--max-width);
-	padding: 0 var(--spacing-md);
-}
-
-header { padding: var(--spacing-lg) 0; }
-
-.header-content
-{
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: var(--spacing-lg);
-	align-items: center;
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-ul li {
-
-}
+article div { margin-bottom: 1rem; }
