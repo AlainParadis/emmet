@@ -1,0 +1,37 @@
+{% assign articles = site.articles %}
+
+{% if include.wherefield and include.wherevalue %}
+  {% assign articles = articles | where: include.wherefield, include.wherevalue %}
+{% endif %}
+
+{% if include.sortby %}
+  {% assign articles = articles | sort: include.sortby %}
+{% endif %}
+
+{% if include.limit %}
+  {% assign articles = articles | slice: 0, include.limit %}
+{% endif %}
+
+<div class="articles-cards">
+  {% for article in articles %}
+    <article class="article-card">
+      <h2>
+        <a href="{{ article.url | relative_url }}">
+          {{ article.title }}
+        </a>
+      </h2>
+
+      {% if article.date %}
+        <p class="article-meta">
+          {{ article.date | date: "%B %-d, %Y" }}
+        </p>
+      {% endif %}
+
+      {% if article.excerpt %}
+        <p class="article-excerpt">
+          {{ article.excerpt }}
+        </p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
