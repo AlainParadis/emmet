@@ -15,8 +15,8 @@
 	<article class="" id="">
 	<h2>{{ page.title }}</h2>
     <div>{{ page.date }} | Categories: {{ page.categories }}</div>
-    <div>{{ page.excerpt | markdownify }}</div>
-	{{ content }}
+    <div>{{ page.excerpt | markdownify | image_baseurl }}</div>
+	{{ content | image_baseurl }}
 	</article>
 </main>
 <footer>
