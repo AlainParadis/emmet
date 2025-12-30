@@ -77,6 +77,7 @@ a:focus
 }
 
 header, section, article, footer { padding: 1rem; }
+header { padding: 0; }
 
 article.card
 {
@@ -85,7 +86,6 @@ article.card
 	border: solid 1px #C0C0C0;
 }
 
-/* Cards grid layout */
 .articles > div
 {
 	display: grid;
@@ -93,13 +93,9 @@ article.card
 	gap: var(--gap);
 }
 
-/* 2x2 grid on larger screens */
 @media (min-width: 768px)
 {
-	.articles > div
-	{
-		grid-template-columns: repeat(2, 1fr);
-	}
+	.articles > div { grid-template-columns: repeat(2, 1fr); }
 }
 
 header
@@ -107,7 +103,27 @@ header
 	background-color: #C0C0C0;
 	width: 100vw;
 	margin-left: calc(-50vw + 50%);
+	display: flex;
+	justify-content: flex-start;
+	padding: 0;
 }
+
+header .wrapper
+{
+	display: flex;
+	justify-content: flex-start;
+	width: 50em;
+	margin: 0 auto;
+}
+
+header h1
+{
+	width: 100%;
+	max-width: var(--max-width);
+	padding: 1rem;
+	margin: 0;
+}
+
 section { }
 footer { border-top: 1px solid #C0C0C0; }
 
