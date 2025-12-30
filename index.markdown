@@ -32,11 +32,8 @@ layout: default
 	</section>
 	{% assign public_articles = site.articles | where_exp: "article", "article.draft == false" %} 
 	<section class="articles" id="articles">
-		<h2>
-			These are my articles: 
-		</h2>
 		<div>
-			{% include cards-articles.html articles=public_articles sortby="date" limit=6 %} 
+			{% include cards-articles.html articles=public_articles sortby="date" limit=4 %} 
 		</div>
 	</section>
 </main>
