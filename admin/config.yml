@@ -6,8 +6,8 @@ backend:
   branch: main
   publish_mode: editorial_workflow
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "/emmet/assets/uploads"
+public_folder: "/emmet/assets/uploads"
 
 collections:
   - name: "articles"

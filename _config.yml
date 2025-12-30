@@ -1,5 +1,5 @@
 port: 4003
-url: "https://alainparadis.github.io"
+url: "https://alainparadis.github.io/emmet"
 baseurl: "/emmet"
 github_username: alainparadis
 github_repo: "https://alainparadis.github.io/emmet/"
@@ -16,10 +16,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-include:
-  - static
 
 collections:
   articles:
     output: true
-    permalink: /articles/:slug/
+    permalink: /articles/:title/

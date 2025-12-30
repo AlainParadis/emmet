@@ -12,13 +12,13 @@
 
 {% for article in articles %}
   <article class="card">
-    <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+    <h3><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></h3>
     {% if article.date %}
       <p class="card-date">{{ article.date | date: "%B %-d, %Y" }}</p>
     {% endif %}
     {% if article.excerpt %}
       <p class="card-excerpt">{{ article.excerpt | markdownify }}</p>
     {% endif %}
-    <a href="{{ article.url }}" class="card-link">Read more</a>
+    <a href="{{ site.baseurl }}{{ article.url }}" class="card-link">Read more</a>
   </article>
 {% endfor %}
