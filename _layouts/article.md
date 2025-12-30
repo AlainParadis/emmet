@@ -17,13 +17,13 @@
 		<div class="wrapper">
 			<article class="" id="">
 				<h2>
-					{{ page.title }}
+					{{ page.title }} 
 				</h2>
 				<div>
-					{{ page.date }} | Categories: {{ page.categories }}
+					{{ page.date }} | Categories: {{ page.categories }} 
 				</div>
 				<div>
-					{{ page.excerpt | markdownify | image_baseurl }}
+					{{ page.excerpt | markdownify | image_baseurl }} 
 				</div>
 				{{ content | image_baseurl }} 
 			</article>
