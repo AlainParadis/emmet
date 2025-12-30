@@ -65,19 +65,16 @@ a:focus
 .page-wrapper
 {
 	display: grid;
-	/* One column, auto rows, no vertical gaps */
 	grid-template-columns: 1fr;
 	grid-auto-rows: auto;
 	row-gap: 0;
 	column-gap: 0;
 	width: 100%;
-	max-width: var(--max-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 header, section, article, footer { padding: 1rem; }
-header { padding: 0; }
 
 article.card
 {
@@ -92,28 +89,14 @@ article.card
 	grid-template-columns: 1fr;
 	gap: var(--gap);
 }
-
-@media (min-width: 768px)
-{
-	.articles > div { grid-template-columns: repeat(2, 1fr); }
+.wrapper {
+    max-width: 50em;
+    margin: 0 auto;
 }
-
 header
 {
-	background-color: #C0C0C0;
+	background-color: #D6D6D6;
 	width: 100vw;
-	margin-left: calc(-50vw + 50%);
-	display: flex;
-	justify-content: flex-start;
-	padding: 0;
-}
-
-header .wrapper
-{
-	display: flex;
-	justify-content: flex-start;
-	width: 50em;
-	margin: 0 auto;
 }
 
 header h1
@@ -124,7 +107,6 @@ header h1
 	margin: 0;
 }
 
-section { }
 footer { border-top: 1px solid #C0C0C0; }
 
 .skip-links
@@ -190,3 +172,16 @@ article img
 }
 
 article div { margin-bottom: 1rem; }
+section.findme { background-color: #EBEBEB; }
+
+section.findme .wrapper
+{
+	display: flex;
+	flex: row wrap;
+	justify-content: space-around;
+}
+
+@media (min-width: 768px)
+{
+	.articles > div { grid-template-columns: repeat(2, 1fr); }
+}
