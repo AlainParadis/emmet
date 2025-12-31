@@ -19,6 +19,8 @@
     {% if article.excerpt %}
       <p class="card-excerpt">{{ article.excerpt | markdownify }}</p>
     {% endif %}
-    <a href="{{ site.baseurl }}{{ article.url }}" class="card-link">Read more</a>
-  </article>
+    <p class="text-right">
+        <a href="{{ site.baseurl }}{{ article.url }}" class="card-link">Read more…</a>
+    </p>
+    </article>
 {% endfor %}
