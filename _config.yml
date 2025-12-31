@@ -21,3 +21,5 @@ collections:
   articles:
     output: true
     permalink: /articles/:title/
+  photography:
+    output: true

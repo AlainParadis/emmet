@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="photo-entry">
+  <h1>{{ page.title }}</h1>
+  <div class="entry-content">
+    <div class="gallery-wrapper">
+      <div class="carousel-container">
+        <div class="carousel-track" id="track">
+          {% for item in page.gallery %}
+          <div class="slide">
+            <img src="{{ item.image }}" alt="{{ item.alt | default: page.title }}">
+            <div class="caption-overlay">
+              <span class="photo-title">{{ page.title }}</span>
+              {% if item.caption %}
+              <span class="photo-desc">— {{ item.caption }}</span>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <button class="nav-btn prev" onclick="moveSlide(-1)" aria-label="Previous">❮</button>
+        <button class="nav-btn next" onclick="moveSlide(1)" aria-label="Next">❯</button>
+      </div>
+      <div class="counter" id="counter">1 / 1</div>
+    </div>
+
+    {{ content }}
+  </div>
+</article>
