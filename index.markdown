@@ -4,7 +4,6 @@ title: Home
 --- 
 
 <section class="hero">
-	<h1>{{ site.data.sitewide.sitetitle }}</h1>
 	<p>Reporter, editor, student.</p>
 	<div class="hero-social">
 		<a href="{{ site.data.sitewide.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">in</a>
