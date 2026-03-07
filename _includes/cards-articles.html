@@ -4,7 +4,7 @@
   {% assign articles = articles | where: include.wherefield, include.wherevalue %}
 {% endif %}
 {% if include.sortby %}
-  {% assign articles = articles | sort: include.sortby %}
+  {% assign articles = articles | sort: include.sortby | reverse %}
 {% endif %}
 {% if include.limit %}
   {% assign articles = articles | slice: 0, include.limit %}
@@ -12,15 +12,14 @@
 
 {% for article in articles %}
   <article class="card">
-    <h3><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></h3>
-    {% if article.date %}
-      <p class="card-date">{{ article.date | date: "%B %-d, %Y" }}</p>
+    {% if article.featured_image %}
+      <img src="{{ site.baseurl }}{{ article.featured_image }}" alt="{{ article.title }}" />
     {% endif %}
+    <p class="card-date">{{ article.date | date: "%B %-d, %Y" }}</p>
+    <h3><a href="{{ site.baseurl }}{{ article.url }}" class="no-decoration">{{ article.title }}</a></h3>
     {% if article.excerpt %}
-      <p class="card-excerpt">{{ article.excerpt | markdownify }}</p>
+      <p class="card-excerpt">{{ article.excerpt | markdownify | strip_html | truncatewords: 20 }}</p>
     {% endif %}
-    <p class="text-right">
-        <a href="{{ site.baseurl }}{{ article.url }}" class="card-link">Read more…</a>
-    </p>
-    </article>
+    <a href="{{ site.baseurl }}{{ article.url }}" class="card-link">Read more…</a>
+  </article>
 {% endfor %}

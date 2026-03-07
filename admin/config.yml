@@ -6,7 +6,6 @@ backend:
   repo: alainparadis/emmet
   branch: main
   publish_mode: editorial_workflow
-#  app_id: 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
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"

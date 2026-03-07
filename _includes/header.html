@@ -1,3 +1,9 @@
-<h1>
-	<a href="{{ site.baseurl }}/" class="no-decoration">{{ site.data.sitewide.sitetitle }}</a>
-</h1>
+<nav class="sidebar">
+	<a href="{{ site.baseurl }}/" class="site-identifier">Emmet<br>Paradis</a>
+	<ul>
+		<li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+		<li><a href="{{ site.baseurl }}/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About Me</a></li>
+		<li><a href="{{ site.baseurl }}/articles/" {% if page.url == "/articles/" %}class="active"{% endif %}>My Articles</a></li>
+		<li><a href="{{ site.baseurl }}/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
+	</ul>
+</nav>
