@@ -14,7 +14,6 @@
 </button>
 <div class="nav-overlay" id="navOverlay"></div>
 {% include header.html %}
-<header id="header" class="header"></header>
 <main id="main">
 {{ content }}
 </main>
