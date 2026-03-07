@@ -1,4 +1,5 @@
-local_backend: true
+local_backend: false
+site_url: http://localhost:4003/emmet/
 
 backend:
   name: github

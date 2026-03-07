@@ -13,47 +13,43 @@
 </head>
 <body>
 <ul class="skip-links">
-	<li><a href="#articles">Jump to Articles</a></li>
+	<li><a href="#main">Jump to Main Content</a></li>
 </ul>
-<header id="header" class="header">
-	<div class="wrapper">
-		<h1>
-	<a href="/emmet/" class="no-decoration">Emmet’s Portfolio</a>
-</h1> 
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+	<span></span>
+	<span></span>
+	<span></span>
+</button>
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="sidebar">
+	<a href="/emmet/" class="site-identifier">Emmet<br>Paradis</a>
+	<ul>
+		<li><a href="/emmet/" class="active">Home</a></li>
+		<li><a href="/emmet/about/" >About Me</a></li>
+		<li><a href="/emmet/articles/" >My Articles</a></li>
+		<li><a href="/emmet/contact/" >Contact</a></li>
+	</ul>
+</nav>
+<header id="header" class="header"></header>
+<main id="main">
+<section class="hero">
+	<h1>Emmet’s Portfolio</h1>
+	<p>Reporter, editor, student.</p>
+	<div class="hero-social">
+		<a href="https://www.linkedin.com/in/emmet-paradis-486753302/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+		<a href="https://www.instagram.com/emmet_paradis/" target="_blank" rel="noopener" title="Instagram">📷</a>
 	</div>
-</header>
-<main>
-<main>
-	<section class="siteintro" id="siteintro">
-		<div class="wrapper">
-			<div>
-				<h2>
-					Welcome 
-				</h2>
-				<p>
-					This is body copy for the <strong>INTRODUCTORY TEXT</strong>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-				</p>
-			</div>
-			<div>
-				<h2>
-					About Me 
-				</h2>
-				<p>
-					This is text <strong>ABOUT ME</strong>. I'm 20 years old. I have a diploma in Journalism. I'm working on a degree in polical studies. I've written for The Algonquin Times, Village Media, and The Queen's Journal. This is my portfolio. 
-				</p>
-			</div>
-		</div>
-	</section>
-	<section id="findme" class="findme">
-		<div class="wrapper">
-			<span class="findme"><a href="https://www.linkedin.com/in/emmet-paradis-486753302/" target="_blank">LinkedIn</a></span> <span class="findme"><a href="https://muckrack.com/" target="_blank">Muck Rack</a></span> <span class="findme"><a href="https://www.instagram.com/emmet_paradis/" target="_blank">Instagram</a></span> 
-		</div>
-	</section>
-	 
-	<section class="articles" id="articles">
-		<div class="wrapper">
-			<div class="cards-wrapper">
-				
+</section>
+
+<section class="intro">
+	<h2>Welcome</h2>
+	<p>This is body copy for the <strong>INTRODUCTORY TEXT</strong>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</section>
+
+<section class="articles" id="articles">
+	<h2>Latest Articles</h2>
+	<div class="cards-wrapper">
+		
 
 
 
@@ -61,86 +57,103 @@
 
 
   <article class="card">
-    <h3><a href="/emmet/articles/this-is-my-first-article/">This is my First Article</a></h3>
     
-      <p class="card-date">December 29, 2025</p>
+      <img src="/emmet/assets/uploads/golf-r.jpg" alt="This is my First Article" />
     
+    <p class="card-date">December 29, 2025</p>
+    <h3><a href="/emmet/articles/this-is-my-first-article/" class="no-decoration">This is my First Article</a></h3>
     
-      <p class="card-excerpt"><p>This is an excerpt for my <strong>FIRST ARTICLE</strong>. This is like a deck. It introduces the story. It may be shown on its own, or it may appear before the story.</p>
-</p>
+      <p class="card-excerpt">This is an excerpt for my FIRST ARTICLE. This is like a deck. It introduces the story. It may be...</p>
     
-    <p class="text-right">
-        <a href="/emmet/articles/this-is-my-first-article/" class="card-link">Read more…</a>
-    </p>
-    </article>
+    <a href="/emmet/articles/this-is-my-first-article/" class="card-link">Read more…</a>
+  </article>
 
   <article class="card">
-    <h3><a href="/emmet/articles/this-is-my-second-article/">This is my Second Article</a></h3>
     
-      <p class="card-date">December 29, 2025</p>
+      <img src="/emmet/assets/uploads/golf-r.jpg" alt="This is my Second Article" />
     
+    <p class="card-date">December 29, 2025</p>
+    <h3><a href="/emmet/articles/this-is-my-second-article/" class="no-decoration">This is my Second Article</a></h3>
     
-      <p class="card-excerpt"><p>This is an excerpt for my <strong>SECOND ARTICLE</strong>. This is like a deck. It introduces the story. It may be shown on its own, or it may appear before the story.</p>
-</p>
+      <p class="card-excerpt">This is an excerpt for my SECOND ARTICLE. This is like a deck. It introduces the story. It may be...</p>
     
-    <p class="text-right">
-        <a href="/emmet/articles/this-is-my-second-article/" class="card-link">Read more…</a>
-    </p>
-    </article>
+    <a href="/emmet/articles/this-is-my-second-article/" class="card-link">Read more…</a>
+  </article>
 
   <article class="card">
-    <h3><a href="/emmet/articles/this-is-my-third-article/">This is my Third Article</a></h3>
     
-      <p class="card-date">December 29, 2025</p>
+      <img src="/emmet/assets/uploads/golf-r.jpg" alt="This is my Third Article" />
     
+    <p class="card-date">December 29, 2025</p>
+    <h3><a href="/emmet/articles/this-is-my-third-article/" class="no-decoration">This is my Third Article</a></h3>
     
-      <p class="card-excerpt"><p>This is an excerpt for my <strong>THIRD ARTICLE</strong>. This is like a deck. It introduces the story. It may be shown on its own, or it may appear before the story.</p>
-</p>
+      <p class="card-excerpt">This is an excerpt for my THIRD ARTICLE. This is like a deck. It introduces the story. It may be...</p>
     
-    <p class="text-right">
-        <a href="/emmet/articles/this-is-my-third-article/" class="card-link">Read more…</a>
-    </p>
-    </article>
+    <a href="/emmet/articles/this-is-my-third-article/" class="card-link">Read more…</a>
+  </article>
 
   <article class="card">
-    <h3><a href="/emmet/articles/this-is-my-fourth-article/">This is my Fourth Article</a></h3>
     
-      <p class="card-date">December 29, 2025</p>
+      <img src="/emmet/assets/uploads/golf-r.jpg" alt="This is my Fourth Article" />
     
+    <p class="card-date">December 29, 2025</p>
+    <h3><a href="/emmet/articles/this-is-my-fourth-article/" class="no-decoration">This is my Fourth Article</a></h3>
     
-      <p class="card-excerpt"><p>This is an excerpt for my <strong>FOURTH ARTICLE</strong>. This is like a deck. It introduces the story. It may be shown on its own, or it may appear before the story.</p>
-</p>
+      <p class="card-excerpt">This is an excerpt for my FOURTH ARTICLE. This is like a deck. It introduces the story. It may be shown...</p>
     
-    <p class="text-right">
-        <a href="/emmet/articles/this-is-my-fourth-article/" class="card-link">Read more…</a>
-    </p>
-    </article>
+    <a href="/emmet/articles/this-is-my-fourth-article/" class="card-link">Read more…</a>
+  </article>
 
- 
-			</div>
-			<p class="text-right">
-				<a href="/articles/">More articles...</a> 
-			</p>
-		</div>
-	</section>
-</main>
+
+	</div>
+	<p class="text-right">
+		<a href="/emmet/articles/">View all articles</a>
+	</p>
+</section>
 
 </main>
 <footer>
-	<div class="wrapper">
-		<div>
+	<div>
     <nav>
-        <span><a href="/emmet">Home</a></span>
-        <span><a href="https://www.linkedin.com/in/emmet-paradis-486753302/" target="_blank">LinkedIn</a></span>
-        <span><a href="https://muckrack.com/" target="_blank">Muck Rack</a></span>
-        <span><a href="https://www.instagram.com/emmet_paradis/" target="_blank">Instagram</a></span>
-     <span><a href="/emmet/photography/">Photography</a></span>
+        <a href="/emmet/">Home</a>
+        <a href="/emmet/articles/">Articles</a>
+        <a href="/emmet/photography/">Photography</a>
+        <a href="https://www.linkedin.com/in/emmet-paradis-486753302/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/emmet_paradis/" target="_blank" rel="noopener">Instagram</a>
     </nav>
 </div>
 <div>
-    <span>&copy; 2026 Emmet Paradis. All rights reserved. </span>
+    <span>&copy; 2026 Emmet Paradis. All rights reserved.</span>
 </div>
-	</div>
 </footer>
+<script>
+	const hamburger = document.getElementById('hamburger');
+	const nav = document.querySelector('nav.sidebar');
+	const overlay = document.getElementById('navOverlay');
+	const navLinks = document.querySelectorAll('nav.sidebar a');
+
+	hamburger.addEventListener('click', () => {
+		const isOpen = hamburger.classList.toggle('open');
+		nav.classList.toggle('open');
+		overlay.classList.toggle('open');
+		hamburger.setAttribute('aria-expanded', isOpen);
+	});
+
+	overlay.addEventListener('click', () => {
+		hamburger.classList.remove('open');
+		nav.classList.remove('open');
+		overlay.classList.remove('open');
+		hamburger.setAttribute('aria-expanded', false);
+	});
+
+	navLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			hamburger.classList.remove('open');
+			nav.classList.remove('open');
+			overlay.classList.remove('open');
+			hamburger.setAttribute('aria-expanded', false);
+		});
+	});
+</script>
 </body>
 </html>
