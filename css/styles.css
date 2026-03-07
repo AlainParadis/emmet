@@ -101,6 +101,7 @@ nav.sidebar ul {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
+	margin-top: 3.5rem;
 }
 
 nav.sidebar a {
@@ -115,11 +116,24 @@ nav.sidebar a {
 	transition: var(--transition);
 }
 
-nav.sidebar a.site-identifier {
-    font-size: 2rem;
+/* Site Identifier */
+a.site-identifier {
+	display: block;
+	position: fixed;
+	top: 1.25rem;
+	left: 1rem;
+	z-index: 101;
+	color: white;
+	text-decoration: none;
+	font-family: var(--sans);
+	font-size: 1.5rem;
 	font-weight: 500;
-	margin-bottom: var(--spacing-md);
-	line-height: 1.2;
+	white-space: nowrap;
+	transition: var(--transition);
+}
+
+a.site-identifier:hover {
+	color: var(--color-accent);
 }
 
 nav.sidebar a:hover,
@@ -220,9 +234,14 @@ a:active {
 	border-bottom-color: var(--color-link-hover);
 }
 
-a.no-decoration {
-	color: var(--color-text);
+a.site-identifier,
+a.site-identifier:link,
+a.site-identifier:visited,
+a.site-identifier:hover,
+a.site-identifier:focus,
+a.site-identifier:active {
 	border: none;
+	border-bottom: none;
 }
 
 a.no-decoration:hover {
@@ -372,6 +391,10 @@ section h2 {
 	margin-bottom: var(--spacing-md);
 }
 
+section.intro {
+	background-color: transparent;
+}
+
 /* Skip Links */
 .skip-links {
 	margin: 0;
@@ -424,18 +447,6 @@ footer span {
 /* Utility */
 .text-right {
 	text-align: right;
-}
-
-small {
-	font-size: var(--font-size-small);
-}
-
-em {
-	font-style: italic;
-}
-
-strong {
-	font-weight: 900;
 }
 
 /* Carousel/Photography Gallery */
@@ -559,6 +570,11 @@ strong {
 	
 	main {
 		padding: 5rem var(--spacing-md) var(--spacing-md) var(--spacing-md);
+	}
+	
+	a.site-identifier {
+		left: 5.5rem;
+		color: #000000;
 	}
 	
 	button.hamburger {
